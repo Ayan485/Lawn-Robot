@@ -3,25 +3,44 @@
 void setup(){
     pinMode(13,OUTPUT);
 }
-
-int LED_state = LOW;
+enum State{blink, off};
+State LED_state = blink;
 int prevmillis = 0;
-const long On = 3000;
+int blinkCount = 0;
+const long On = 500;
 const long Off = 2000;
 
 void loop(){
-  if (LED_state==HIGH)
+  switch (LED_state)
   {
-   if (millis()-prevmillis >= On){
-        LED_state = LOW;
-        digitalWrite(13,LED_state);
+  case blink:
+    /* code */
+    if (millis()-prevmillis >= On){
         prevmillis = millis();
+      if (digitalRead(13) == HIGH)
+      {
+        digitalWrite(13,LOW);
+        blinkCount++;
+      }else{
+        digitalWrite(13,HIGH);
+      }
+
+      if (blinkCount == 3)
+      {
+        LED_state = off;
+        digitalWrite(13,LOW);
+        prevmillis = millis();
+        blinkCount =0;
+      }
+      
     }
-  }else{
+    break;
+  
+  case off:
     if (millis()-prevmillis >=Off){
-        LED_state = HIGH;
-        digitalWrite(13,LED_state);
+        LED_state = blink;
         prevmillis = millis();
-    }
+      }
+    break;
   }
 }
