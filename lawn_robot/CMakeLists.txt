@@ -16,9 +16,13 @@ find_package(std_msgs REQUIRED)
 
 add_executable(Hello_Lawn_Robot src/Hello_Lawn_Robot.cpp)
 ament_target_dependencies(Hello_Lawn_Robot rclcpp std_msgs)
+add_executable(Lawn_listener src/Lawn_listener.cpp)
+ament_target_dependencies(Lawn_listener rclcpp std_msgs)
+
 
 install(TARGETS
   Hello_Lawn_Robot
+  Lawn_listener
   DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
