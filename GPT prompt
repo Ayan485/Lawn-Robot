@@ -1,0 +1,13 @@
+I know basics of ros2, please explain me the task and help me build an understanding of the concepts in this task and please don't send me the code but make me capable enough to write the code myself
+ROS2 Nodes Communication Advance
+#10
+Multi Node Inter-communication
+
+    Create 3 nodes
+        Publishing your Video from webcam
+        Subscribing your Video and grayscaling image and then publishing
+        Receiving the video and applying canny edge detector and then publishing
+
+Visualize all video streams in rviz simultaneously
+
+after this, please ask me 5 questions to check my understanding

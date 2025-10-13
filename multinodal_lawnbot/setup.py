@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'cam_robot'
+package_name = 'multinodal_lawnbot'
 
 setup(
     name=package_name,
@@ -16,14 +16,14 @@ setup(
     maintainer='ubuntu',
     maintainer_email='ayan48508@gmail.com',
     description='TODO: Package description',
-    license='Apache-2.0',
+    license='TODO: License declaration',
     extras_require={
         'test': [
             'pytest',
         ],
     },
     entry_points={
-        'console_scripts': [ 'cam = cam_robot.Cam:main'
+        'console_scripts': ['imgPub = multinodal_lawnbot.imgPub:main', 'graySub = multinodal_lawnbot.graySub:main', 'cannyEdge = multinodal_lawnbot.cannyEdge:main'
         ],
     },
 )
