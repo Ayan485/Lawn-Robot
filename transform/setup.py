@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'lawn_service'
+package_name = 'transform'
 
 setup(
     name=package_name,
@@ -23,8 +23,7 @@ setup(
         ],
     },
     entry_points={
-        'console_scripts': ['text = lawn_service.text_service:main',
-                            'canny = lawn_service.canny_service:main'
+        'console_scripts': [ 'transform  = transform.transform:main', 'circle = transform.circle:main'
         ],
     },
 )
