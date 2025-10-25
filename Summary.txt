@@ -1,3 +1,0 @@
-﻿This week, I learnt about different softwares to use in learning about robotics software development like platform io and vscode. We made c++ code for arduino/esp32 for blinking the LEDs using tume delay andillis function. We learnt about the hardware required to build a Slam robot. Planning the hardware, doing it's documentation.
-
-Firstb ssh push
