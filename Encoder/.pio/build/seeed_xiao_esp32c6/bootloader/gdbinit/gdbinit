@@ -1,0 +1,2 @@
+source /home/ubuntu/ros2_ws/src/Encoder/.pio/build/seeed_xiao_esp32c6/bootloader/gdbinit/symbols
+source /home/ubuntu/ros2_ws/src/Encoder/.pio/build/seeed_xiao_esp32c6/bootloader/gdbinit/connect
